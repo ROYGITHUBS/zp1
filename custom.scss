@@ -1,0 +1,25 @@
+
+---
+layout: post
+title: "Designing APM Health Score KPIs: From Sensor Signals to Actions"
+categories: [apm, analytics]
+tags: [apm, kpi, health-score, cumulocity, iot]
+summary: "A practitioner's view on modeling asset health scores and connecting them to maintenance decisions."
+---
+
+In this article we discuss practical patterns to design **APM health scores**, starting from IoT sensor feeds and ending with actionable maintenance tasks in EAM.
+
+## Patterns
+- **Signal normalization** → feature engineering per asset class
+- **Thresholding vs. ML** → start simple; iterate
+- **Contextual enrichment** → usage, environment, and maintenance history
+
+## Implementation Notes
+- Align asset hierarchy and IDs across IoT and EAM.
+- Maintain explainability for business adoption.
+- Close the loop with automated notifications or work orders.
+
+## Checklist
+- Data quality SLA defined
+- KPI ownership & lifecycle
+- Governance for retraining thresholds/models

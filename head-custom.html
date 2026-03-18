@@ -1,0 +1,46 @@
+
+# ---- Site settings ----
+title: "SAP SSAM & SAP APM Blog"
+description: "Hands-on notes, guides, and field learnings for SAP Service & Asset Manager (SSAM) and SAP Asset Performance Management (APM)."
+url: ""   # set your site URL if using a custom domain, e.g., https://example.com
+baseurl: "" # leave blank for project pages at the root
+
+# ---- Author ----
+author:
+  name: "Shirsendu Roy"
+  email: ""
+  twitter_username: ""
+  linkedin_username: ""
+
+# ---- Build ----
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# ---- Navigation ----
+minima:
+  social_links:
+    - { platform: github,   user_url: "https://github.com/" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/" }
+
+# ---- Collections/Taxonomy (simple tags) ----
+defaults:
+  - scope: { path: "", type: posts }
+    values:
+      layout: post
+      toc: true
+      tags: [sap, eam, mobility]
+
+# ---- SEO ----
+seo:
+  type: "Blog"
+
+# ---- Exclude ----
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - blog/POST-TEMPLATE.md

@@ -1,0 +1,28 @@
+
+---
+layout: post
+title: "SSAM Offline Sync Deep Dive: Queues, Logs, and Conflict Handling"
+categories: [ssam, mobility]
+tags: [ssam, offline, sync, troubleshooting]
+summary: "Understand SSAM's offline store, delta sync behavior, and how to diagnose sync issues in production."
+---
+
+This post breaks down how **SAP Service & Asset Manager (SSAM)** handles offline data, including the role of the offline OData store, delta tokens, and conflict resolution strategies. We also walk through a checklist for diagnosing sync failures.
+
+## Key Concepts
+- **Offline OData store**: local persistence, encryption, and dataset scoping.
+- **Delta synchronization**: managing payload sizes and background sync windows.
+- **Conflict handling**: last-write-wins vs. server-side rules.
+
+## Troubleshooting Checklist
+1. Verify OData metadata alignment between mobile client and backend.
+2. Inspect device logs and payload sizes.
+3. Check backend ICF services and CSRF/token configs.
+4. Review user roles/authorizations and data filters.
+
+## Practical Tips
+- Keep initial download scope minimal for first-time sync.
+- Use targeted reset for corrupt stores.
+- Automate client log collection for L2/L3 support workflows.
+
+> Note: Always validate against your SSAM version and backend stack.
